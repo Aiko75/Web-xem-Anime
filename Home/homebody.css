@@ -1,0 +1,212 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px; /* Khoảng cách với footer */
+}
+
+header {
+  width: 90%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: white; /* cần màu nền để tránh mờ nền khi cuộn */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional: tạo đổ bóng đẹp hơn */
+  border-radius: 10px;
+}
+
+section {
+  scroll-margin-top: 270px; /* Khoảng cách với header cố định */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 12%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  width: 60%;
+  height: 50%;
+  list-style: none;
+  background-color: rgb(179, 179, 179);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+nav a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+}
+
+nav a:hover {
+  color: #007bff;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search-bar {
+  width: 20%;
+  height: 50%;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 10px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+#home-text,
+#popular-text,
+#genre-text,
+#season-text,
+#type-text {
+  font-size: 48px;
+  text-align: left;
+  margin-top: 150px; /* Khoảng cách với taskbar cố định */
+  margin-left: 170px;
+}
+
+#Home,
+#Popular,
+#Genre,
+#Season,
+#Type {
+  margin-top: 50px; /* Adjusted to account for the fixed header */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.animecard {
+  width: 300px;
+  height: 680px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.animecard h3 {
+  max-width: 250px;
+  overflow: hidden;
+  height: 50px;
+  margin: 10px 0;
+  text-align: center;
+}
+.animecard p {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0;
+}
+
+.animecard:hover {
+  transform: scale(1.05);
+}
+
+.animetextbox {
+  width: 20%;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.animetextbox:hover {
+  background-color: #e0e0e0;
+}
+
+#loadMoreBtn {
+  width: 180px;
+  height: 45px;
+  background-color: #1f1f1f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 20px auto; Center the button
+}
+#loadMoreBtn:hover {
+  background-color: #444;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+#loadMoreBtn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -110%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  transition: all 0.5s ease;
+}
+
+#loadMoreBtn:hover::before {
+  left: 100%;
+}
