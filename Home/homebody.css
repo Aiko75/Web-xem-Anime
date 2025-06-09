@@ -111,12 +111,22 @@ nav a:hover {
 #Type {
   margin-top: 50px; /* Adjusted to account for the fixed header */
   width: 100%;
+  height: 500px;
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  overflow: scroll;
+}
+
+#Home,
+#Popular{
+  width: 90%;
+  height: 750px;
+  overflow: scroll;
+  margin: 0 auto;
 }
 
 .animecard {
